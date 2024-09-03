@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Sans:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --primary: #5396fb;
+        --secondary: #8fd8fc;
+        --danger: #ff204e;
+        --background: black;
+        --foreground: #1F1F1F;
+        --dark: #000000;
+        --light: rgba(255, 255, 255, 0.94);
+        --font-sans: 'Geist Sans', sans-serif;
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        transition: background-color 5000s ease-in-out 0s;
+    }
+}
+
+@layer utilities {
+    body {
+        @apply font-sans text-dark bg-light dark:text-light dark:bg-background;
+        margin: 0;
+        padding: 0;
+    }
+
+    .toast-top-left {
+        @apply fixed top-2 left-2 z-[100] md:max-w-[420px];
+    }
+
+    .nav-link {
+        @apply flex items-center gap-2 text-sm px-4 py-3 my-[2px] rounded-none cursor-pointer;
+    }
+
+    .nav-active {
+        /*@apply bg-slate-200 dark:bg-slate-800;*/
+    }
+}
+
+.button-relative {
+    position: relative; /* This will contain the Badge correctly */
+}
+
+.table-badge {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Ensure the badge text aligns nicely with other text in the table */
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    margin-right: 8px; /* Space between badge and any text or element after it */
+}
+
+/* Add specific background colors for each status directly in the class to avoid conflicts */
+.table-badge.running {
+    animation: fade 2s infinite;
+    background-color: #ffc107; /* Initial color for the animation */
+}
+
+.table-badge.completed {
+    background-color: #4caf50;
+}
+
+.table-badge.failed {
+    background-color: #f44336;
+}
+
+.table-badge.queued {
+    background-color: #ffeb3b;
+}

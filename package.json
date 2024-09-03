@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "framer-motion": "^11.3.19",
+    "react-confetti": "^6.1.0"
+  }
+}

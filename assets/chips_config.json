@@ -1,0 +1,19 @@
+{
+    "chips": [
+      {
+        "id": "ldpc1",
+        "name": "LDPC Chip 1",
+        "pin": 2
+      },
+      {
+        "id": "ldpc2",
+        "name": "LDPC Chip 2",
+        "pin": 3
+      },
+      {
+        "id": "ldpc3",
+        "name": "LDPC Chip 3",
+        "pin": 4
+      }
+    ]
+  }
